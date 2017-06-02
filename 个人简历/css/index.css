@@ -1,0 +1,261 @@
+@charset "utf-8";
+html,body {
+    width: 100%; height: 100%;
+    margin: 0; padding: 0;
+    overflow: hidden;
+}
+ul,ol,li{
+    margin:0;
+    padding:0;
+    display:inline-block;
+    white-space:nowrap;
+}
+ul{
+    width:400px;
+    height:70px;
+    margin-left:400px;
+    margin-right:200px;
+    margin-top:30px;
+}
+li{
+    width:130px;
+    height:30px;
+    font-size:12px;
+    padding-left:20px;
+    list-style:none;
+    line-height:20px;
+    border-bottom: 1px solid #fff;
+}
+/**************************************************/
+/* 细节设置部分 */
+/**************************************************/
+page {
+    width: 100%; height: 100%;
+    color: #fff;
+    display: block;
+    position: absolute;
+    background:url(../img/bg.jpg) no-repeat;
+    background-size: cover;
+}
+/*页面1*/
+.head {
+    width:200px;
+    height:100px;
+    margin-top:240px;
+    margin-left:350px;
+    text-align: center;
+}
+label{
+    color:#fff;
+}
+.info {
+    margin-top:-70px;
+}
+.tt{
+    width:230px;
+    height:30px;
+    margin-bottom:60px;
+    font-size:30px;
+    margin-left:570px; 
+}
+l{
+    color:#f04f08;
+}
+.name {
+    font-size:30px;
+    margin-left:570px;
+}
+.qm{
+    display: block;
+    margin-left:570px;
+}
+/*页面2*/
+.page2 {
+    left: 100%;
+}
+.infor{
+    width:70%;
+    height:auto;
+    margin-bottom:40px;
+}
+.t{
+    color:#f0a908;
+    font-size:30px;
+}
+.t:nth-child(1){
+    display: block;
+    margin-left:400px;
+    margin-top:100px;
+}
+.edction {
+    color:#f0a908;
+}
+.edction li{
+    border:none;
+    padding:0;
+    font-size:14px;
+    width:160px;
+}
+.edction label{
+    color:#f0a908;
+    margin-right:5px;
+}
+/*页面3*/
+.page3 {
+    left: 100%;
+}
+.zszs {
+    width:70%;
+    height:auto;
+    margin:0 auto;
+    margin-left:400px;
+    margin-top:20px;
+    margin-bottom:40px;
+}
+.zs{
+    width:200px;
+    display: inline-block;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 15px 50px rgba(0,0,0,.5);
+}
+.zs img {
+    display: block;
+    max-width: 100%;
+    transition: opacity .2s ease-in-out;
+}
+.zs:hover img {
+    opacity: .5;
+}
+.zs::after,
+.zs::before {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 35%;
+    transition: transform .4s ease-out;
+    color: #fff;
+}
+.zs::after {
+    content: attr(data-title);
+    top: 0;
+    padding-top:30px;
+    transform: translateY(-100%) scale(.8);
+    background: rgba(0,0,0,.4);
+    font-size:20px;
+    font-weight: 300;
+    font-family: Merriweather, serif;
+    text-align: center;
+}
+.zs::before {
+    content: attr(data-description) "…";
+    top: 50%;
+    padding: 20px;
+    transform: translateY(100%) scale(.8);
+    background: rgba(107,38,68,.6);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    color: #f1f1f1;
+    font-size: 14px;
+}
+.zs:hover::after,
+.zs:hover::before {
+    transform: translateY(0%) scale(1);
+}
+.t:nth-child(3){
+    display: block;
+    margin-left:400px;
+}
+.jn{
+    width:50%;
+    height:200px;
+    margin-left:400px;
+}
+.j{
+    display: inline-block;
+    border-radius:50%;
+    width:150px;
+    height:150px;
+    background-color:rgba(193, 204, 214, 0.08);
+    text-align:center;
+    line-height:150px;
+    transition: 0.6s;
+    margin-top:20px;
+}
+.j:hover{
+    transform:rotate(-1080deg);
+}
+.page4 {
+    left: 100%;
+}
+.like{
+    margin-left:400px; 
+    font-size:60px;
+    color:black;
+}
+.like img{
+    width:100px;
+    height:100px;
+}
+/**************************************************/
+/* 动画执行部分 */
+/**************************************************/
+.page2_anim-1 {
+    animation: page2_anim-1 0.8 both;
+}
+.page3_anim-1 {
+    animation: page3_anim-1 0.8s both;
+}
+.page4_anim-1 {
+    animation: page4_anim-1 0.8s both;
+}
+.page2_anim-1 {
+    animation: page2_anim-1 0.8s both;
+}
+.page3_anim-1 {
+    animation: page3_anim-1 0.8s both;
+}
+.page4_anim-1 {
+    animation: page4_anim-1 0.8s both;
+}
+/**************************************************/
+/* 动画定义部分 */
+/**************************************************/
+/* page2 */
+@keyframes page2_anim-1 {
+    0% {
+        transform: scale(0.8);
+        left: 100%;
+    }
+
+    100% {
+        transform: scale(1);
+        left: 0%;
+    }
+}
+/* page3 */
+@keyframes page3_anim-1 {
+    0% {
+        transform: scale(0.8);
+        left: 100%;
+    }
+
+    100% {
+        transform: scale(1);
+        left: 0%;
+    }
+}
+/*page4*/
+@keyframes page4_anim-1 {
+    0% {
+        transform: scale(0.8);
+        left: 100%; 
+    }
+
+    100% {
+        transform: scale(1);
+        left: 0%;
+    }
+}
